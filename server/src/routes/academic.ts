@@ -46,8 +46,19 @@ router.put("/semesters/:semester", asyncHandler(async (req: AuthRequest, res) =>
 router.delete("/semesters/:semester", asyncHandler(async (req: AuthRequest, res) => {
   const semester = Number(req.params.semester);
   const record = await AcademicRecord.findOne({ user: req.userId });
-  if (record) { record.semesters = record.semesters.filter(s => s.semester !== semester); await record.save(); }
-  res.json({ message: "Semester marks reset." });
+if (record) {
+  const remainingSemesters = record.semesters.filter(
+    (s) => s.semester !== semester
+  );
+
+  record.semesters.splice(
+    0,
+    record.semesters.length,
+    ...remainingSemesters
+  );
+
+  await record.save();
+}  res.json({ message: "Semester marks reset." });
 }));
 router.delete("/", asyncHandler(async (req: AuthRequest, res) => {
   await AcademicRecord.findOneAndDelete({ user: req.userId });
