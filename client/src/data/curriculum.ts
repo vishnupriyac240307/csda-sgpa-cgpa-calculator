@@ -1,0 +1,55 @@
+export type Subject = {
+  id: string; semester: number; name: string; code?: string; category: string;
+  maxMarks: number; credits: number; includedInSGPA: boolean; includedInCGPA: boolean;
+  allowDecimalMarks: boolean; required: boolean;
+};
+// Transcribed from the supplied Bharathiar University B.Sc. Computer Science with Data Analytics
+// 2023-24 onwards curriculum image. OR alternatives are represented as one elective slot each.
+export const CURRICULUM_VERSION = "bharathiar-csda-2023-24-v1";
+export const CURRICULUM: Subject[] = [
+  { id: "s1_language1", semester: 1, name: "Language - I", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_english1", semester: 1, name: "English - I", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_c_programming", semester: 1, name: "Core 1: Programming in C", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_data_structures", semester: 1, name: "Core 2: Data Structures", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_c_lab", semester: 1, name: "Core Lab 1: Programming Lab - C", category: "Practical", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_linear_algebra", semester: 1, name: "Allied 1: Introduction to Linear Algebra", category: "Allied", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s1_environmental", semester: 1, name: "Environmental Studies", category: "Value Education", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_language2", semester: 2, name: "Language - II", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_english2", semester: 2, name: "English - II", category: "Language", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_nm_effective_english", semester: 2, name: "Naan Mudhalvan - Skill Course: Effective English", category: "Skill Course", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_cpp", semester: 2, name: "Core 3: Programming in C++", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_cpp_lab", semester: 2, name: "Core Lab 2: Programming Lab - C++", category: "Practical", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_internet_lab", semester: 2, name: "Core Lab 3: Internet Basics Lab", category: "Practical", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_discrete_math", semester: 2, name: "Allied 2: Discrete Mathematics", category: "Allied", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s2_human_rights", semester: 2, name: "Value Education - Human Rights", category: "Value Education", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_language3", semester: 3, name: "Language - III", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_english3", semester: 3, name: "English - III", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_java", semester: 3, name: "Core 4: JAVA Programming", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_dbms", semester: 3, name: "Core 5: Database Management Systems", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_java_lab", semester: 3, name: "Core Lab 4: JAVA Programming Lab", category: "Practical", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_data_com_networks", semester: 3, name: "Allied 3: Data Communication and Networks", category: "Allied", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_data_visualization", semester: 3, name: "Skill Based Subject 1: Data Visualization", category: "Skill Course", maxMarks: 75, credits: 3, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s3_elective_slot", semester: 3, name: "Tamil / Advanced Tamil OR Non-major Elective I (Yoga for Human Excellence / Women's Rights)", category: "Elective", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_language4", semester: 4, name: "Language - IV", category: "Language", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_english4", semester: 4, name: "English - IV", category: "Language", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_nm_office_lab", semester: 4, name: "Naan Mudhalvan - Skill Course: Office Fundamentals - Lab", category: "Skill Course", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_python", semester: 4, name: "Core 6: Python Programming", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_dwdm", semester: 4, name: "Core 7: Data Warehousing and Data Mining", category: "Core", maxMarks: 100, credits: 3, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_python_lab", semester: 4, name: "Core Lab 5: Python Programming Lab", category: "Practical", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_deep_learning", semester: 4, name: "Allied 4: Deep Learning", category: "Allied", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_capstone_phase1", semester: 4, name: "Skill Based Subject 2: Capstone Project Work Phase I", category: "Project", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s4_elective_slot", semester: 4, name: "Tamil / Advanced Tamil OR Non-major Elective II (General Awareness)", category: "Elective", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s5_r", semester: 5, name: "Core 8: R Programming", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s5_bda", semester: 5, name: "Core 9: Big Data Analytics", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s5_r_lab", semester: 5, name: "Core Lab 6: R Programming Lab", category: "Practical", maxMarks: 75, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s5_elective1", semester: 5, name: "Elective I: Business Data Analytics / Social Network Analysis / Artificial Neural Network and Fuzzy Systems (choose one)", category: "Elective", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s5_capstone_phase2", semester: 5, name: "Skill Based Subject 3: Capstone Project Work Phase II", category: "Project", maxMarks: 75, credits: 3, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_linux_shell", semester: 6, name: "Core 10: Linux and Shell Programming", category: "Core", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_project_work", semester: 6, name: "Core 11: Project Work Lab", category: "Project", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_linux_lab", semester: 6, name: "Core Lab 7: Linux and Shell Programming Lab", category: "Practical", maxMarks: 75, credits: 3, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_elective2", semester: 6, name: "Elective II: Web Application Security / Software Agents / Embedded Systems (choose one)", category: "Elective", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_elective3", semester: 6, name: "Elective III: Client Server Computing / Open Source Software / Principles of Secure Coding (choose one)", category: "Elective", maxMarks: 100, credits: 4, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_machine_learning", semester: 6, name: "Skill Based Subject 4: Machine Learning", category: "Skill Course", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_nm_skill", semester: 6, name: "Naan Mudhalvan: Cyber Security / Machine Learning / Android App Development (choose one)", category: "Skill Course", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+  { id: "s6_extension", semester: 6, name: "Extension Activities", category: "Extension Activity", maxMarks: 50, credits: 2, includedInSGPA: true, includedInCGPA: true, allowDecimalMarks: false, required: true },
+];
