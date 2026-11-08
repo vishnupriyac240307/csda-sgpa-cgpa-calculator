@@ -10,7 +10,22 @@ import curriculumRoutes from "./routes/curriculum.js";
 
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5001",
+  "https://csda-sgpa-cgpa-calculator-three.vercel.app"
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`Origin ${origin} is not allowed by CORS`));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json({ limit: "30kb" }));
 app.use(cookieParser());
 app.get("/api/health", (_req, res) => res.json({ status: "ok" }));
